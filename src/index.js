@@ -13,7 +13,7 @@ class SpotLight {
 
 		let defaultOptions = {
 			dimmedColor: `rgba(0,0,0,0.4)`,
-			zoomedColor: '#fff' || window.getComputedStyle(el, null)['backgroundColor'], //임시 코드
+			zoomedColor: window.getComputedStyle(el, null)['backgroundColor'] || '#fff', //임시 코드
 			zoomKey: util.isMac()? 'metaKey': 'ctrlKey',
 			zoomScale: 2,
 			zoomElClassName: 'spotlight-zoom',
